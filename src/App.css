@@ -1,38 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #b15757;
+}
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.task-form{
   display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.task-form input{
+  padding: 10px;
+  width: 300px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.task-form button{
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.task-list{
+  display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.task-list li{
+  list-style: none;
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+}
+.task-list li input{
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+.task-list li input.completed{
+  text-decoration: line-through;
+}
+.task-list li button{
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 70px;
+  margin-left: 8px;
+  padding: 10px;
+}
+.task-list li button.complete{
+  background-color: green;
+}
+.task-list li button.edit{
+  background-color: blue;
+}
+.task-list li button.delete{
+  background-color: red;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media only screen and (max-width: 600px){
+  .task-list li{
+    width: 90%;
   }
 }
